@@ -1,0 +1,23 @@
+.rixo-calendar, .rixo-calendar * {
+    box-sizing: border-box;
+}
+
+ol.rixo-calendar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rixo-calendar li {
+    width: 33%;
+    padding: 10px;
+}
+
+.rixo-calendar li:nth-child(odd) {
+    background: deepskyblue;
+}
+
+.rixo-calendar li:nth-child(even) {
+    background: lightblue;
+}

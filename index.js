@@ -5,7 +5,7 @@ const port = 8000
 const app = express()
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html')
+  res.sendFile(__dirname + '/public/calendar.html')
 })
 
 app.use(

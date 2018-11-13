@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Calendrier</title>
+
+        <link rel="stylesheet" href="/client/lib/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/client/calendar.css"/>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div id="calendar">
+
+                <!-- Navigation calendar -->
+                <div class="row">
+                    <div class="col-3 cal-nav">
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" title="Periode precedente" @click="prevPeriod">Precedente</button>
+                    </div>
+
+                    <div class="col-6 cal-nav">
+                        <h2>{{ period }}</h2>
+                    </div>
+
+                    <div class="col-3 cal-nav">
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" title="Periode suivante" @click="nextPeriod">Suivante</button>
+                    </div>
+                </div>
+                <!-- END Navigation calendar -->
+
+                <!-- Content calendar -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="cal-head" v-for="day in days">{{ day.name }}</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr v-if="newtr">
+                                        <td class="cal-body" v-for="date in dates">{{ date.num }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Content calendar -->
+
+            </div>
+        </div>
+
+        <script src="/client/lib/bootstrap.min.js"></script>
+        <script src="/client/lib/moment.min.js"></script>
+        <script src="/client/lib/moment-fr.js"></script>
+        <script src="/client/lib/vue.js"></script>
+        <script src="/client/calendar.js"></script>
+    </body>
+</html>
