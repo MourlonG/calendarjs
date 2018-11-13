@@ -4,7 +4,10 @@
     "description": "calendarjs project",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "nodemon": "node_modules/.bin/nodemon index.js",
+        "browser-sync": "node_modules/.bin/browser-sync start --watch --files public --proxy http://localhost:8000",
+        "start": "npm run nodemon & npm run browser-sync"
     },
     "repository": {
         "type": "git",

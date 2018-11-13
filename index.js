@@ -1,7 +1,18 @@
 const express = require('express')
+
+const port = 8000
+
 const app = express()
-const port = 3000
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html')
+})
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.use(
+  '/client',
+  express.static(__dirname + '/public')
+)
+
+app.listen(port, () => {
+  console.log(`Listening on ${port}`)
+})
