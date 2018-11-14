@@ -7,24 +7,7 @@
     />
   </head>
   <body>
-    <div id="app" class="rixo-todo-list">
-      <h1>{{ title }}</h1>
-
-      <button v-on:click="add">Add TODO</button>
-
-      <p>Choses à faire&nbsp;:{{ count }}</p>
-
-      <h2>List 1</h2>
-      <ol class="list">
-        <li class="item" v-for="item in items"><h3>{{ item.title }}</h3></li>
-      </ol>
-
-      <!-- With component -->
-      <h2>List with component</h2>
-      <ol class="list">
-        <todo-item v-for="item in items" v-bind:item="item"></todo-item>
-      </ol>
-    </div>
+    <div id="app"></div>
 
     <script src="/client/lib/vue.js"></script>
     <script src="/client/client.js"></script>

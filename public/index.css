@@ -13,3 +13,5 @@
       background-color: lightyellow; }
       .rixo-todo-list .list .item h3 {
         padding: .3em; }
+      .rixo-todo-list .list .item .delete {
+        float: right; }
