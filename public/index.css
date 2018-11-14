@@ -1,23 +1,15 @@
-.rixo-calendar, .rixo-calendar * {
-    box-sizing: border-box;
-}
-
-ol.rixo-calendar {
+.rixo-todo-list {
+  text-align: center; }
+  .rixo-todo-list ol.list {
     list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.rixo-calendar li {
-    width: 33%;
-    padding: 10px;
-}
-
-.rixo-calendar li:nth-child(odd) {
-    background: deepskyblue;
-}
-
-.rixo-calendar li:nth-child(even) {
-    background: lightblue;
-}
+    padding: 0; }
+  .rixo-todo-list .list {
+    max-width: 320px;
+    margin: auto;
+    color: #666; }
+    .rixo-todo-list .list .item {
+      display: block;
+      box-shadow: 0 1px 3px 1px #aaa;
+      background-color: lightyellow; }
+      .rixo-todo-list .list .item h3 {
+        padding: .3em; }
